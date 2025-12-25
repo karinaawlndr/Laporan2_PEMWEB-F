@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Teknis Penulisan: Font Times New Roman, Size 12, Spasi 1.5 - [cite: 6, 7, 8] */
         body { 
             font-family: 'Times New Roman', Times, serif; 
             font-size: 12px; 
@@ -16,7 +15,6 @@
             color: #333;
         }
 
-        /* Container Judul Abu-abu (tanpa shadow) - [cite: 20] */
         .gray-header {
             background-color: #e9ecef; 
             padding: 5px 10px;
@@ -25,7 +23,6 @@
             text-transform: uppercase;
         }
 
-        /* Sidebar Kotak Kontak - [cite: 110, 114] */
         .sidebar-box {
             background-color: #e9ecef;
             padding: 15px;
@@ -33,12 +30,11 @@
             border: none;
         }
 
-        /* Kertas Utama (Tanpa Shadow) */
         .main-paper {
             max-width: 900px;
             margin: 20px auto;
             padding: 30px;
-            border: 1px solid #dee2e6; /* Menggunakan border tipis sebagai pengganti shadow */
+            border: 1px solid #dee2e6;
         }
 
         .profile-img {
@@ -48,12 +44,10 @@
             border: 1px solid #dee2e6;
         }
 
-        /* Paragraph Alignment: Justify -  */
         .text-justify {
             text-align: justify;
         }
 
-        /* Responsivitas Layar Kecil - [cite: 110] */
         @media (max-width: 768px) {
             .header-content {
                 text-align: center;
@@ -85,7 +79,7 @@
                 <p class="mb-1"><strong>Email</strong><br>karinaawlndr@gmail.com</p>
                 <p class="mb-0"><strong>Domisili</strong><br>Jakarta, Indonesia</p>
                 
-                <button class="btn btn-dark btn-sm w-100 mt-3 border-0" id="btnTukarTema">Ganti Tema Sidebar</button>
+                <button class="btn btn-dark btn-sm w-100 mt-3 border-0" id="btnTukarTema">Ganti Tema</button>
             </div>
 
             <div class="gray-header">KEAHLIAN</div>
@@ -152,7 +146,6 @@
     const sidebar = document.getElementById('sidebarKontak');
 
     btn.addEventListener('click', function() {
-        // Manipulasi Style (Tanpa Shadow)
         if (sidebar.style.backgroundColor === 'rgb(52, 58, 64)') {
             sidebar.style.backgroundColor = '#e9ecef';
             sidebar.style.color = '#000';
@@ -168,4 +161,5 @@
 </script>
 
 </body>
+
 </html>
