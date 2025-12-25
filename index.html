@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Teknis Penulisan: Font Times New Roman, Size 12, Spasi 1.5 - [cite: 6, 7, 8] */
+        body { 
+            font-family: 'Times New Roman', Times, serif; 
+            font-size: 12px; 
+            line-height: 1.5; 
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Container Judul Abu-abu (tanpa shadow) - [cite: 20] */
+        .gray-header {
+            background-color: #e9ecef; 
+            padding: 5px 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Sidebar Kotak Kontak - [cite: 110, 114] */
+        .sidebar-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        /* Kertas Utama (Tanpa Shadow) */
+        .main-paper {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #dee2e6; /* Menggunakan border tipis sebagai pengganti shadow */
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid #dee2e6;
+        }
+
+        /* Paragraph Alignment: Justify -  */
+        .text-justify {
+            text-align: justify;
+        }
+
+        /* Responsivitas Layar Kecil - [cite: 110] */
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+                border-bottom: 1px solid #dee2e6;
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-paper">
+    <div class="row header-content align-items-center mb-4">
+        <div class="col-md-3">
+            <img src="asset/img/foto-pribadi.jpg" alt="Foto Profil" class="profile-img">
+        </div>
+        <div class="col-md-9">
+            <h1 class="fw-bold mb-0 text-uppercase">KARINA AULIA WULANDARI</h1>
+            <p class="fs-6 text-muted">S1 Teknik Informatika</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sidebar-box" id="sidebarKontak">
+                <div class="fw-bold mb-2">KONTAK</div>
+                <p class="mb-1"><strong>Whatsapp</strong><br>+62 898 5143 308</p>
+                <p class="mb-1"><strong>Linkedin</strong><br>Karina Aulia</p>
+                <p class="mb-1"><strong>Email</strong><br>karinaawlndr@gmail.com</p>
+                <p class="mb-0"><strong>Domisili</strong><br>Jakarta, Indonesia</p>
+                
+                <button class="btn btn-dark btn-sm w-100 mt-3 border-0" id="btnTukarTema">Ganti Tema Sidebar</button>
+            </div>
+
+            <div class="gray-header">KEAHLIAN</div>
+            <ul class="list-unstyled ps-2 mb-4">
+                <li>Marketing</li>
+                <li>Analis Data</li>
+                <li>Komunikasi</li>
+            </ul>
+
+            <div class="gray-header">SOFTWARE</div>
+            <ul class="list-unstyled ps-2 mb-4">
+                <li>Microsoft Word</li>
+                <li>Microsoft Excel</li>
+                <li>VS Code</li>
+            </ul>
+        </div>
+
+        <div class="col-md-8">
+            <div class="gray-header">PROFIL</div>
+            <p class="text-justify mb-4">
+                Saya adalah mahasiswa Teknik Informatika yang memiliki fokus pada pengembangan antarmuka web yang efisien dan responsif. Memiliki pengalaman dalam mengelola proyek mandiri seperti pembuatan sistem inventaris sederhana dan mahir menggunakan Bootstrap untuk mempercepat proses styling. Saya memiliki komitmen tinggi untuk terus belajar dan mampu beradaptasi dengan teknologi baru secara cepat.
+            </p>
+
+            <div class="gray-header">PENGALAMAN KERJA</div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between flex-wrap fw-bold">
+                        <span>Junior Web Developer</span>
+                        <span>2023 - 2024</span>
+                    </div>
+                    <div class="text-secondary mb-2">PT Sinergi Teknologi Indonesia (Data Sintetis)</div>
+                    <ul class="ps-3 text-justify">
+                        <li>Mengembangkan antarmuka landing page yang responsif menggunakan framework Bootstrap.</li>
+                        <li>Melakukan optimasi pada struktur kode HTML dan CSS untuk meningkatkan kecepatan muat halaman.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between flex-wrap fw-bold">
+                        <span>Staff IT Support</span>
+                        <span>2021 - 2022</span>
+                    </div>
+                    <div class="text-secondary mb-2">CV Digital Mandiri Semarang (Data Sintetis)</div>
+                    <ul class="ps-3 text-justify">
+                        <li>Bertanggung jawab atas pemeliharaan rutin perangkat keras dan jaringan internal perusahaan.</li>
+                        <li>Mengelola basis data inventaris menggunakan Microsoft Excel secara terstruktur.</li>
+                    </ul>
+                </div>
+
+            <div class="gray-header">PENDIDIKAN</div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>S1 Teknik Informatika</span>
+                    <span>2022 - 2026</span>
+                </div>
+                <div>Institut Teknologi Perusahaan Listrik Negara</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('btnTukarTema');
+    const sidebar = document.getElementById('sidebarKontak');
+
+    btn.addEventListener('click', function() {
+        // Manipulasi Style (Tanpa Shadow)
+        if (sidebar.style.backgroundColor === 'rgb(52, 58, 64)') {
+            sidebar.style.backgroundColor = '#e9ecef';
+            sidebar.style.color = '#000';
+            this.innerText = 'Ganti Tema Sidebar';
+            this.className = 'btn btn-dark btn-sm w-100 mt-3 border-0';
+        } else {
+            sidebar.style.backgroundColor = '#343a40';
+            sidebar.style.color = '#fff';
+            this.innerText = 'Tema Terang';
+            this.className = 'btn btn-outline-secondary btn-sm w-100 mt-3 border-0';
+        }
+    });
+</script>
+
+</body>
+</html>
